@@ -1,16 +1,76 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+.app {
+    .sections {
+        @apply h-screen;
+        /* height: 100vh; */
+
+        &::-webkit-scrollbar {
+            @apply hidden;
+        }
+
+        > * {
+            @apply h-screen w-screen;
+            scroll-snap-align: start;
+        }
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.nav {
+    &-item {
+        &.active {
+            @apply bg-blue-200;
+
+            a {
+                span {
+                    @apply text-white;
+                }
+            }
+
+            &:last-child {
+                @apply bg-green-200;
+            }
+        }
+    }
 }
 
-* {
-  box-sizing: border-box;
+.scrollspy {
+    &-wrapper {
+        &.active {
+            @apply translate-x-0;
+        }
+    }
+}
+
+.ityped-cursor {
+    @apply text-3xl opacity-100 md:text-6xl;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
 }
