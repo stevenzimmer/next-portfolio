@@ -16,7 +16,11 @@ export default function Snap(props) {
                         variant="h6"
                         className="text-base md:text-xl"
                     >
-                        <ReactScrollLink to={props.section} duration={300}>
+                        <ReactScrollLink
+                            to={props.section}
+                            duration={300}
+                            rel="nofollow"
+                        >
                             {props.children}
                         </ReactScrollLink>
                     </Typography>

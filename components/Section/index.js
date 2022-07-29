@@ -210,6 +210,7 @@ export default function Section(props) {
                                         color="secondary"
                                         endIcon={<LaunchIcon />}
                                         target="_blank"
+                                        rel="nofollow"
                                     >
                                         <a>
                                             {props.buttonText
