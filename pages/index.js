@@ -4,11 +4,11 @@ import { sections } from "@/data/sections";
 import Section from "@/components/Section";
 
 import { Link } from "react-scroll";
-export default function Home({ dogBreed }) {
+export default function Home() {
     const [navClasses, setNavClasses] = useState("");
 
     return (
-        <div className="app relative h-screen">
+        <div className="app relative md:h-screen">
             <div className="sections relative w-full">
                 {sections.map((section, i, all) => {
                     let nextSectionID =
@@ -20,7 +20,6 @@ export default function Home({ dogBreed }) {
                             key={section.id}
                             index={i}
                             isLast={i + 1 === sections.length}
-                            dogBreed={dogBreed}
                         />
                     );
                 })}
@@ -69,16 +68,9 @@ export default function Home({ dogBreed }) {
         </div>
     );
 }
-export async function getServerSideProps(context) {
-    const randomImg = await fetch("https://dog.ceo/api/breeds/image/random");
-    const randomImgJSON = await randomImg.json();
+// export async function getServerSideProps(context) {
 
-    return {
-        props: {
-            dogBreed: randomImgJSON.message,
-        }, // will be passed to the page component as props
-    };
-}
+// }
 
 // const getScreenshot = async (url, id) => {
 //     const browser = await puppeteer.launch({ headless: true });

@@ -39,7 +39,7 @@ export default function Section(props) {
             id={props.id}
             container
             component="section"
-            className=" section"
+            className="section"
             direction={props.index % 2 === 0 ? `row-reverse` : `row`}
         >
             <Grid
@@ -52,12 +52,10 @@ export default function Section(props) {
                 <img
                     className={`relative mx-auto w-full ${
                         props.url
-                            ? "h-80 object-contain md:h-full"
+                            ? "h-40 object-contain md:h-full"
                             : "h-full object-cover"
                     } relative md:absolute`}
-                    src={`${
-                        props.id === "dog-breed" ? props.dogBreed : props.image
-                    }`}
+                    src={`${props.image}`}
                     alt={props.title}
                 />
             </Grid>
@@ -71,7 +69,7 @@ export default function Section(props) {
                             {props.advanceText}
                         </Snap>
                     )}
-                    <div className="flex w-full items-center justify-center py-12 md:h-full md:py-0 ">
+                    <div className="flex w-full items-center justify-center pt-12 pb-32 md:h-full md:py-0 ">
                         <div className="w-11/12 lg:w-9/12">
                             {props.header && (
                                 <Typography

@@ -9,7 +9,7 @@ html {
 }
 .app {
     .sections {
-        @apply h-screen;
+        @apply md:h-screen;
         /* height: 100vh; */
 
         &::-webkit-scrollbar {
@@ -17,8 +17,10 @@ html {
         }
 
         > * {
-            @apply h-screen w-screen;
-            scroll-snap-align: start;
+            @apply md:h-screen md:w-screen;
+            @screen md {
+                scroll-snap-align: start;
+            }
         }
     }
 }
