@@ -52,7 +52,7 @@ export default function Section(props) {
                 <img
                     className={`relative mx-auto w-full ${
                         props.url
-                            ? "h-40 object-contain md:h-full"
+                            ? "h-80 object-contain md:h-full"
                             : "h-full object-cover"
                     } relative md:absolute`}
                     src={`${props.image}`}
@@ -101,7 +101,7 @@ export default function Section(props) {
                                 align="center"
                                 color="primary"
                                 variant="h2"
-                                className={`md:text-2xl font-medium`}
+                                className={`text-2xl font-medium`}
                                 gutterBottom
                             >
                                 {props.title}
@@ -115,11 +115,7 @@ export default function Section(props) {
                                 >
                                     {props.label}
                                 </Typography>
-                            )}{" "}
-                            <Grid container className=" section">
-                                <Grid item xs={12} sm={12} md={7}></Grid>
-                                <Grid item xs={12} sm={12} md={5}></Grid>
-                            </Grid>
+                            )}
                             {props.dates && (
                                 <Typography
                                     align="center"

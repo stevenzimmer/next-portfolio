@@ -289,6 +289,7 @@ export const sections = [
                         text: "Marketo",
                         icon: <SiMarketo className="text-[#4c50cc]" />,
                     },
+
                     {
                         text: "Google Analtyics",
                         icon: <DiGoogleAnalytics className="text-[#ffca28]" />,
@@ -332,6 +333,10 @@ export const sections = [
                         icon: <SiMarketo className="text-[#4c50cc]" />,
                     },
                     {
+                        icon: <SiPhp className="text-[#8c4bff]" />,
+                        text: "PHP",
+                    },
+                    {
                         text: "Google Analtyics",
                         icon: <DiGoogleAnalytics className="text-[#ffca28]" />,
                     },
@@ -368,6 +373,10 @@ export const sections = [
                         icon: <SiHubspot className=" text-[#4c50cc]" />,
                     },
                     {
+                        icon: <SiPhp className="text-[#8c4bff]" />,
+                        text: "PHP",
+                    },
+                    {
                         text: "WPEngine",
                         icon: <SiWpengine className="text-[#0ecad4]" />,
                     },
@@ -380,9 +389,9 @@ export const sections = [
         id: "dog-breed",
         icon: <FaDog />,
         label: "",
-        title: "Dog breed guessing game",
+        title: "Dog breed guess",
         bullets: [
-            "An ecommerce store to promote and sell cookies for humans and treats for pets with local delivery functionality",
+            "A game that displays a random dog breed and the user selects the photo of the dog that matches the breed.",
         ],
         image: "/assets/images/benji-field.jpg",
         url: "stevenzimmer.github.io/dog-breed/",
@@ -482,7 +491,6 @@ export const sections = [
             "Subject matter expert teaching cruise missile maintenance fundamentals, electronic theory, circuitry and schematic diagrams at the vocational school for basic training recruits.",
         ],
         dates: "November 2002 - June 2012",
-
         image: "/assets/images/air-force.JPG",
         advanceText: "Get in touch",
     },
