@@ -1,12 +1,7 @@
-// import Link from "next/link";
 import ITyped from "react-ityped";
-// import Image from "next/image";
-
-import { Typography, Grid, Paper, Chip, Button } from "@mui/material";
-// import FaceIcon from "@mui/icons-material/Face";
+import { Typography, Grid, Paper, Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
 import { makeStyles } from "@mui/styles";
-// import Map from "../Map/Map";
 
 import Snap from "../Snap";
 
@@ -36,13 +31,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Section(props) {
     const classes = useStyles();
-    const strings = [
-        "Developer",
-        "Designer",
-        "Engineer",
-        "Marketer",
-        "Dev Zim",
-    ];
+    const strings = ["Developer", "Designer", "Engineer", "Marketer", "Zim"];
 
     return (
         <Grid
@@ -58,32 +47,21 @@ export default function Section(props) {
                 xs={12}
                 sm={12}
                 md={7}
-                className={`relative overflow-hidden bg-blue-50 shadow-inner `}
+                className={`relative overflow-hidden bg-blue-50 flex justify-center items-center`}
             >
                 {props.image && (
                     <>
                         <img
-                            className={`relative h-full w-full ${
+                            className={`relative mx-auto w-full ${
                                 props.url
-                                    ? "object-contain shadow-lg"
-                                    : "object-cover"
+                                    ? "h-80 object-contain md:h-full"
+                                    : "h-full object-cover"
                             } relative md:absolute`}
-                            src={`/assets/images/${props.image}`}
-                            // width={`100%`}
-                            // height={`100%`}
-                            // layout="responsive"
+                            src={`${props.image}`}
                             alt={props.title}
                         />
-                        {/* <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-grey-700 to-transparent"></div> */}
                     </>
                 )}
-
-                {/* {props.data.coordinates && (
-                    // <Map
-                    //     active={props.mapActive}
-                    //     coordinates={props.data.coordinates}
-                    // />
-                )} */}
             </Grid>
             <Grid item xs={12} sm={12} md={5} component={Paper} square>
                 <div className={classes.paper}>
@@ -206,7 +184,7 @@ export default function Section(props) {
                                 </Typography>
                             )} */}
                             {props.bullets?.length && (
-                                <ul className="mb-6 list-disc text-2xl">
+                                <ul className="mb-6 list-disc px-6 md:text-2xl">
                                     {props.bullets?.map((bullet, i) => (
                                         <li key={i} className="mb-2 last:mb-0">
                                             {bullet}
@@ -221,7 +199,6 @@ export default function Section(props) {
                                             key={i}
                                             className="mb-6 flex flex-wrap items-center justify-center space-x-2"
                                         >
-                                            {/* {chip.title} */}
                                             {chip.stacks.map((stack, j) => (
                                                 <div
                                                     key={j}
@@ -254,7 +231,7 @@ export default function Section(props) {
                                     <Button
                                         href={`https://${props.url}`}
                                         variant="contained"
-                                        color="primary"
+                                        color="secondary"
                                         endIcon={<LaunchIcon />}
                                         target="_blank"
                                     >

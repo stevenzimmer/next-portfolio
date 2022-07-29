@@ -7,6 +7,7 @@ import {
     FaFigma,
     FaCookieBite,
     FaStripe,
+    FaDog,
 } from "react-icons/fa";
 
 import {
@@ -24,15 +25,26 @@ import {
     SiFirebase,
     SiMaterialui,
     SiStripe,
+    SiImmer,
+    SiGutenberg,
+    SiElastic,
 } from "react-icons/si";
-
-import { GrInProgress } from "react-icons/gr";
-
 import { BsLinkedin, BsGithub, BsWordpress } from "react-icons/bs";
 
-import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from "react-icons/ri";
+import {
+    RiNumber1,
+    RiNumber2,
+    RiNumber3,
+    RiNumber4,
+    RiNumber5,
+} from "react-icons/ri";
 
-import { AiOutlineMail, AiFillHtml5, AiFillCheckCircle } from "react-icons/ai";
+import {
+    AiOutlineMail,
+    AiFillHtml5,
+    AiFillCheckCircle,
+    AiFillApi,
+} from "react-icons/ai";
 
 import { DiGoogleAnalytics } from "react-icons/di";
 
@@ -42,11 +54,10 @@ export const sections = [
     {
         id: "intro",
         icon: <MdOutlineEmojiPeople />,
-        // header: "Not actually a dog, but share a lab's temperment",
-        label: "Hello! I am Steven",
-        // title: "Steven",
-        // description: "I've ",
-        image: "intro.JPG",
+
+        title: '"A one man web agency"',
+        description: "",
+        image: "/assets/images/intro.JPG",
         bullets: [
             "Military vet turned full-stack engineer specializing in CMS platforms, technical SEO, and marketing tech.",
             `${
@@ -116,7 +127,7 @@ export const sections = [
         // ],
     },
     {
-        header: "Recent project",
+        header: "Part-time project",
         id: "nue",
         icon: <RiNumber1 />,
         label: "Full Stack engineer",
@@ -125,7 +136,7 @@ export const sections = [
         dates: "August 2021 - March 2022",
         // description:
         //     "Built marketing website with headless CMS and static site generator.",
-        image: "nue.png",
+        image: "/assets/images/nue.png",
         bullets: [
             "Collaborated cross functionally with product, brand, and design teams to launch company website.",
         ],
@@ -177,16 +188,15 @@ export const sections = [
         ],
     },
     {
-        header: "Recent project",
+        header: "Part-time project",
         id: "armory",
         icon: <RiNumber2 />,
         label: "WordPress Developer",
         title: "Armory",
         // description: "",
-        image: "armory.png",
+        image: "/assets/images/armory.png",
         bullets: [
             "Rebuilt website with a custom WordPress theme, reduced reliance on heavy plugins, best-in-class load time, high availability architecture.",
-            "Empowered content stakeholders with self service CMS capabilities.",
         ],
         url: "www.armory.io",
         dates: "March 2021 - March 2022",
@@ -221,8 +231,17 @@ export const sections = [
                         icon: <BsWordpress className="text-[#0073aa]" />,
                     },
                     {
+                        text: "Gutenberg block editor",
+                        icon: <SiGutenberg className="text-amber-500" />,
+                    },
+
+                    {
                         icon: <SiPhp className="text-[#8c4bff]" />,
                         text: "PHP",
+                    },
+                    {
+                        icon: <SiElastic className="text-blue-300" />,
+                        text: "Elastic Search",
                     },
                     {
                         text: "Marketo",
@@ -237,7 +256,7 @@ export const sections = [
         ],
     },
     {
-        header: "Recent project",
+        header: "Full-time job",
         id: "intertrust",
         icon: <RiNumber3 />,
         label: "Sr. Web Engineer",
@@ -246,8 +265,54 @@ export const sections = [
             "Technical lead for marketing initiatives, demand gen campaigns, the CMS migration, and website redesign.",
         ],
         // description: "",
-        image: "intertrust.png",
+        image: "/assets/images/intertrust.png",
         url: "www.intertrust.com",
+        dates: "January 2019 - PRESENT",
+        advanceText: "Recent Project: Expressplay",
+        chips: [
+            {
+                title: "Stack",
+                stacks: [
+                    {
+                        text: "Wordpress",
+                        icon: <BsWordpress className="text-[#0073aa]" />,
+                    },
+                    {
+                        icon: <SiPhp className="text-[#8c4bff]" />,
+                        text: "PHP",
+                    },
+                    {
+                        text: "Hubspot",
+                        icon: <SiHubspot className="text-[#4c50cc]" />,
+                    },
+                    {
+                        text: "Marketo",
+                        icon: <SiMarketo className="text-[#4c50cc]" />,
+                    },
+                    {
+                        text: "Google Analtyics",
+                        icon: <DiGoogleAnalytics className="text-[#ffca28]" />,
+                    },
+                    {
+                        text: "WPEngine",
+                        icon: <SiWpengine className="text-[#0ecad4]" />,
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        header: "Full-time job",
+        id: "expressplay",
+        icon: <RiNumber4 />,
+        label: "Sr. Web Engineer",
+        title: "Intertrust",
+        bullets: [
+            "Collaborated with marketing, product, and design teams to redesign and rebuild corporate website into beautiful, performant, responsive experience that aligns with the company's mission, identity, and business needs.",
+        ],
+        // description: "",
+        image: "/assets/images/expressplay.png",
+        url: "www.expressplay.com",
         dates: "January 2019 - PRESENT",
         advanceText: "Recent Project: VIPKid",
         chips: [
@@ -279,14 +344,14 @@ export const sections = [
         ],
     },
     {
-        header: "Recent project",
+        header: "Part-time project",
         id: "vipkid",
-        icon: <RiNumber4 />,
+        icon: <RiNumber5 />,
         label: "WordPress Developer",
         title: "VIPKid",
         bullets: ["Built and maintained company blog"],
         // description: ",
-        image: "vipkid.png",
+        image: "/assets/images/vipkid.png",
         url: "blog.vipkid.com",
         dates: "January 2020 - JANUARY - 2022",
         advanceText: "Personal Projects",
@@ -311,19 +376,64 @@ export const sections = [
         ],
     },
     {
-        header: "In Progress",
+        header: "Game",
+        id: "dog-breed",
+        icon: <FaDog />,
+        label: "",
+        title: "Dog breed guessing game",
+        bullets: [
+            "An ecommerce store to promote and sell cookies for humans and treats for pets with local delivery functionality",
+        ],
+
+        image: "https://dog.ceo/api/breeds/image/random",
+        url: "https://stevenzimmer.github.io/dog-breed/",
+        buttonText: "Play game",
+        dates: "July 2022",
+        advanceText: "eCommerce",
+        chips: [
+            {
+                title: "Frontend",
+                stacks: [
+                    {
+                        icon: <FaReact className="text-[#61DBFB]" />,
+                        text: "React",
+                    },
+
+                    {
+                        icon: <SiTailwindcss className="text-[#38bdf8]" />,
+                        text: "Tailwind CSS",
+                    },
+                ],
+            },
+            {
+                title: "Backend",
+                stacks: [
+                    {
+                        icon: <AiFillApi className="text-indigo-500" />,
+                        text: "dog.ceo API",
+                    },
+                    {
+                        icon: <SiImmer className="text-[#36b2e7]" />,
+                        text: "Immer",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        header: "eCommerce Project",
         id: "inprogress",
         icon: <FaCookieBite />,
         label: "",
         title: "Benji Bakes",
         bullets: [
-            "An ecommerce store to promote and sell cookies for humans and treats for pets with local delivery functionality",
+            "An ecommerce store to sell my wonderful wife's delicious chocolate chip cookies.",
         ],
 
-        image: "benji-bakes.jpg",
+        image: "/assets/images/benji-bakes.jpg",
         url: "github.com/stevenzimmer/benji-bakes",
         buttonText: "view repository",
-        dates: "Started Feb 2022",
+        dates: "Started March 2022",
         advanceText: "Where it started",
         chips: [
             {
@@ -373,18 +483,20 @@ export const sections = [
             "Subject matter expert teaching cruise missile maintenance fundamentals, electronic theory, circuitry and schematic diagrams at the vocational school for basic training recruits.",
         ],
         dates: "November 2002 - June 2012",
-        // description: "Served 10 years in the Air Force",
-        image: "air-force.JPG",
+
+        image: "/assets/images/air-force.JPG",
         advanceText: "Get in touch",
     },
 
     {
         id: "final",
         icon: <AiFillCheckCircle />,
-        // label: "Like what you see?",
         title: "Contact me",
-        description: "Profile links",
-        image: "contact.JPG",
+        bullets: [
+            "I am available for a full-time role, part-time projects, consulting, or even quick fixes.",
+        ],
+        // description: "Profile links",
+        image: "/assets/images/contact-me.jpg",
 
         chips: [
             {
@@ -402,8 +514,8 @@ export const sections = [
                     },
                     {
                         icon: <AiOutlineMail />,
-                        text: "steven@zim.dog",
-                        link: "mailto:steven@zim.dog",
+                        text: "steven@webzim.dev",
+                        link: "mailto:steven@webzim.dev",
                     },
                 ],
             },

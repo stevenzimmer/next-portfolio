@@ -7,11 +7,11 @@ function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
             <Head>
-                <title>WebDevZim | Full-stack problem solver</title>
-                {/* <link
-                    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-                    rel="stylesheet"
-                /> */}
+                <title>Web Zim | Full-stack problem solver</title>
+                <meta
+                    name="description"
+                    content="A full Stack problem solver and a one-man web agency"
+                />
             </Head>
 
             <Component {...pageProps} />
