@@ -56,7 +56,7 @@ export const sections = [
         icon: <MdOutlineEmojiPeople />,
 
         title: '"A one man web agency"',
-        description: "",
+
         image: "/assets/images/intro.JPG",
         bullets: [
             "Military vet turned full-stack engineer specializing in CMS platforms, technical SEO, and marketing tech.",
@@ -130,7 +130,7 @@ export const sections = [
         header: "Part-time project",
         id: "nue",
         icon: <RiNumber1 />,
-        label: "Full Stack engineer",
+        label: "Full-stack engineer",
         title: "Nue",
         url: "www.nue.io",
         dates: "August 2021 - March 2022",
@@ -305,8 +305,8 @@ export const sections = [
         header: "Full-time job",
         id: "expressplay",
         icon: <RiNumber4 />,
-        label: "Sr. Web Engineer",
-        title: "Intertrust",
+        label: "Full-stack engineer",
+        title: "Expressplay",
         bullets: [
             "Collaborated with marketing, product, and design teams to redesign and rebuild corporate website into beautiful, performant, responsive experience that aligns with the company's mission, identity, and business needs.",
         ],

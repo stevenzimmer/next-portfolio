@@ -62,10 +62,7 @@ export default function Section(props) {
             <Grid item xs={12} sm={12} md={5} component={Paper} square>
                 <div className={classes.paper}>
                     {props.advanceText && (
-                        <Snap
-                            index={props.index}
-                            section={props.nextSectionID} //  props.index + 1}`
-                        >
+                        <Snap index={props.index} section={props.nextSectionID}>
                             {props.advanceText}
                         </Snap>
                     )}
@@ -104,36 +101,24 @@ export default function Section(props) {
                                 align="center"
                                 color="primary"
                                 variant="h2"
-                                className={`text-2xl font-medium`}
+                                className={`md:text-2xl font-medium`}
                                 gutterBottom
                             >
                                 {props.title}
-                                {props.label && (
-                                    <Typography
-                                        align="center"
-                                        variant="span"
-                                        className={`text-grey-500 text-xl  font-normal`}
-                                    >
-                                        {" "}
-                                        {props.label}
-                                    </Typography>
-                                )}{" "}
                             </Typography>
+                            {props.label && (
+                                <Typography
+                                    marginBottom={2}
+                                    align="center"
+                                    variant="h3"
+                                    className={`text-grey-500 text-xl  font-normal`}
+                                >
+                                    {props.label}
+                                </Typography>
+                            )}{" "}
                             <Grid container className=" section">
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={12}
-                                    md={7}
-                                    className={` `}
-                                ></Grid>
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={12}
-                                    md={5}
-                                    className={` `}
-                                ></Grid>
+                                <Grid item xs={12} sm={12} md={7}></Grid>
+                                <Grid item xs={12} sm={12} md={5}></Grid>
                             </Grid>
                             {props.dates && (
                                 <Typography
@@ -174,11 +159,6 @@ export default function Section(props) {
                                     />
                                 </Typography>
                             )}
-                            {/* {props.body && (
-                                <Typography align="center" variant="h4">
-                                    {props.body}
-                                </Typography>
-                            )} */}
                             {props.bullets?.length && (
                                 <ul className="mb-6 list-disc px-6 md:text-2xl">
                                     {props.bullets?.map((bullet, i) => (
