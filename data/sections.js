@@ -384,9 +384,7 @@ export const sections = [
         bullets: [
             "An ecommerce store to promote and sell cookies for humans and treats for pets with local delivery functionality",
         ],
-
-        image: "https://dog.ceo/api/breeds/image/random",
-        url: "https://stevenzimmer.github.io/dog-breed/",
+        url: "stevenzimmer.github.io/dog-breed/",
         buttonText: "Play game",
         dates: "July 2022",
         advanceText: "eCommerce",

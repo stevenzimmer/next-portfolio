@@ -49,19 +49,17 @@ export default function Section(props) {
                 md={7}
                 className={`relative overflow-hidden bg-blue-50 flex justify-center items-center`}
             >
-                {props.image && (
-                    <>
-                        <img
-                            className={`relative mx-auto w-full ${
-                                props.url
-                                    ? "h-80 object-contain md:h-full"
-                                    : "h-full object-cover"
-                            } relative md:absolute`}
-                            src={`${props.image}`}
-                            alt={props.title}
-                        />
-                    </>
-                )}
+                <img
+                    className={`relative mx-auto w-full ${
+                        props.url
+                            ? "h-80 object-contain md:h-full"
+                            : "h-full object-cover"
+                    } relative md:absolute`}
+                    src={`${
+                        props.id === "dog-breed" ? props.dogBreed : props.image
+                    }`}
+                    alt={props.title}
+                />
             </Grid>
             <Grid item xs={12} sm={12} md={5} component={Paper} square>
                 <div className={classes.paper}>

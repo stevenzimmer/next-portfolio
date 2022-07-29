@@ -4,7 +4,7 @@ import { sections } from "@/data/sections";
 import Section from "@/components/Section";
 
 import { Link } from "react-scroll";
-export default function Home() {
+export default function Home({ dogBreed }) {
     const [navClasses, setNavClasses] = useState("");
 
     return (
@@ -20,6 +20,7 @@ export default function Home() {
                             key={section.id}
                             index={i}
                             isLast={i + 1 === sections.length}
+                            dogBreed={dogBreed}
                         />
                     );
                 })}
@@ -68,17 +69,16 @@ export default function Home() {
         </div>
     );
 }
-// export async function getServerSideProps(context) {
-//     sections.forEach((section) => {
-//         if (section.url) {
-//             getScreenshot(section.url, section.id);
-//         }
-//     });
+export async function getServerSideProps(context) {
+    const randomImg = await fetch("https://dog.ceo/api/breeds/image/random");
+    const randomImgJSON = await randomImg.json();
 
-//     return {
-//         props: {}, // will be passed to the page component as props
-//     };
-// }
+    return {
+        props: {
+            dogBreed: randomImgJSON.message,
+        }, // will be passed to the page component as props
+    };
+}
 
 // const getScreenshot = async (url, id) => {
 //     const browser = await puppeteer.launch({ headless: true });
