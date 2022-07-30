@@ -1,39 +1,12 @@
-import { useState, useCallback } from "react";
 import ITyped from "react-ityped";
 import { Typography, Grid, Paper, Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import Zoom, { Controlled as ControlledZoom } from "react-medium-image-zoom";
+import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { makeStyles } from "@mui/styles";
 
 import Snap from "../Snap";
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        position: "relative",
-        [theme.breakpoints.up("sm")]: {
-            height: "100vh",
-        },
-    },
-    h1: {
-        fontWeight: 500,
-        marginBottom: "20px",
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "30px",
-        },
-    },
-    h2: {
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "24px",
-        },
-    },
-}));
-
 export default function Section(props) {
-    const classes = useStyles();
     const strings = ["Developer", "Designer", "Engineer", "Marketer", "Zim"];
 
     return (
@@ -77,7 +50,7 @@ export default function Section(props) {
                 square
                 className="relative z-0 overflow-y-scroll"
             >
-                <div className={classes.paper}>
+                <div className="flex flex-col items-center relative sm:h-screen">
                     {props.advanceText && (
                         <Snap index={props.index} section={props.nextSectionID}>
                             {props.advanceText}
@@ -173,7 +146,7 @@ export default function Section(props) {
                                 </Typography>
                             )}
                             {props.bullets?.length && (
-                                <ul className="mb-6 list-disc px-6 md:text-2xl">
+                                <ul className="mb-6 list-disc px-6 text-base md:text-xl">
                                     {props.bullets?.map((bullet, i) => (
                                         <li key={i} className="mb-2 last:mb-0">
                                             {bullet}

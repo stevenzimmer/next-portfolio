@@ -1,4 +1,13 @@
 @tailwind base;
+@layer base {
+    html {
+        @apply text-[14px] antialiased grayscale-0 font-normal leading-normal;
+    }
+
+    h1 {
+        @apply text-5xl;
+    }
+}
 @tailwind components;
 @tailwind utilities;
 
