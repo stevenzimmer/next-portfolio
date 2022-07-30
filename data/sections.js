@@ -55,11 +55,11 @@ export const sections = [
         id: "intro",
         icon: <MdOutlineEmojiPeople />,
 
-        title: '"A one man web agency"',
+        title: '"A one-man web shop"',
 
         image: "/assets/images/intro.JPG",
         bullets: [
-            "Military vet turned full-stack engineer specializing in CMS platforms, technical SEO, and marketing tech.",
+            "Military vet turned full-stack web engineer specializing in CMS platforms, technical SEO, and marketing technology.",
             `${
                 new Date().getFullYear() - 2014
             } years software engineer and web marketing experience`,
@@ -196,7 +196,7 @@ export const sections = [
         // description: "",
         image: "/assets/images/armory.png",
         bullets: [
-            "Rebuilt website with a custom WordPress theme, reduced reliance on heavy plugins, best-in-class load time, high availability architecture.",
+            "Rebuilt website with a custom gutenberg block theme, reduced reliance on heavy plugins, best-in-class load time, high availability architecture.",
         ],
         url: "www.armory.io",
         dates: "March 2021 - March 2022",
@@ -274,6 +274,18 @@ export const sections = [
                 title: "Stack",
                 stacks: [
                     {
+                        icon: <AiFillHtml5 className="text-[#61DBFB]" />,
+                        text: "HTML",
+                    },
+                    {
+                        icon: <SiCss3 />,
+                        text: "CSS",
+                    },
+                    {
+                        icon: <SiJavascript className="text-[#FF9900]" />,
+                        text: "JavaScript",
+                    },
+                    {
                         text: "Wordpress",
                         icon: <BsWordpress className="text-[#0073aa]" />,
                     },
@@ -303,11 +315,11 @@ export const sections = [
         ],
     },
     {
-        header: "Full-time job",
+        header: "An Intertrust product",
         id: "expressplay",
         icon: <RiNumber4 />,
-        label: "Full-stack engineer",
-        title: "Expressplay",
+        label: "Sr. Web Engineer",
+        title: "Intertrust",
         bullets: [
             "Collaborated with marketing, product, and design teams to redesign and rebuild corporate website into beautiful, performant, responsive experience that aligns with the company's mission, identity, and business needs.",
         ],
@@ -320,6 +332,18 @@ export const sections = [
             {
                 title: "Stack",
                 stacks: [
+                    {
+                        icon: <AiFillHtml5 className="text-[#61DBFB]" />,
+                        text: "HTML",
+                    },
+                    {
+                        icon: <SiCss3 />,
+                        text: "CSS",
+                    },
+                    {
+                        icon: <SiJavascript className="text-[#FF9900]" />,
+                        text: "JavaScript",
+                    },
                     {
                         text: "Wordpress",
                         icon: <BsWordpress className="text-[#0073aa]" />,
@@ -364,6 +388,18 @@ export const sections = [
             {
                 title: "Stack",
                 stacks: [
+                    {
+                        icon: <AiFillHtml5 className="text-[#61DBFB]" />,
+                        text: "HTML",
+                    },
+                    {
+                        icon: <SiCss3 />,
+                        text: "CSS",
+                    },
+                    {
+                        icon: <SiJavascript className="text-[#FF9900]" />,
+                        text: "JavaScript",
+                    },
                     {
                         text: "Wordpress",
                         icon: <BsWordpress className="text-[#0073aa]" />,

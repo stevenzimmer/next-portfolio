@@ -1,6 +1,8 @@
 import ITyped from "react-ityped";
 import { Typography, Grid, Paper, Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import { makeStyles } from "@mui/styles";
 
 import Snap from "../Snap";
@@ -47,19 +49,32 @@ export default function Section(props) {
                 xs={12}
                 sm={12}
                 md={7}
-                className={`relative overflow-hidden bg-blue-50 flex justify-center items-center`}
+                className={`md:relative sticky top-0 z-1 overflow-hidden bg-blue-50 flex justify-center items-center`}
             >
-                <img
-                    className={`relative mx-auto w-full ${
-                        props.url
-                            ? "h-80 object-contain md:h-full"
-                            : "h-full object-cover"
-                    } relative md:absolute`}
-                    src={`${props.image}`}
-                    alt={props.title}
-                />
+                <Zoom
+                    wrapStyle={{ width: "100%", height: "100%" }}
+                    zoomMargin={100}
+                >
+                    <img
+                        className={`relative mx-auto w-full inline-block ${
+                            props.url
+                                ? "h-80 object-contain md:h-full"
+                                : "h-full object-cover"
+                        } relative md:absolute`}
+                        src={props.image}
+                        alt={props.title}
+                    />
+                </Zoom>
             </Grid>
-            <Grid item xs={12} sm={12} md={5} component={Paper} square>
+            <Grid
+                item
+                xs={12}
+                sm={12}
+                md={5}
+                component={Paper}
+                square
+                className="relative z-0 overflow-y-scroll"
+            >
                 <div className={classes.paper}>
                     {props.advanceText && (
                         <Snap index={props.index} section={props.nextSectionID}>
@@ -77,7 +92,7 @@ export default function Section(props) {
                                 >
                                     {props.header}
                                 </Typography>
-                            )}{" "}
+                            )}
                             {props.icon && (
                                 <div
                                     className={` mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full shadow md:h-20 md:w-20 ${
@@ -142,8 +157,8 @@ export default function Section(props) {
                             {props.index === 0 && (
                                 <Typography
                                     align="center"
-                                    variant="h2"
-                                    className={classes.h2}
+                                    variant="h1"
+                                    className={"md:text-4xl"}
                                     gutterBottom
                                 >
                                     Web{" "}

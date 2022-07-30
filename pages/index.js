@@ -1,4 +1,5 @@
-import { useState } from "react";
+import Head from "next/head";
+import { useState, useEffect } from "react";
 
 import { sections } from "@/data/sections";
 import Section from "@/components/Section";
@@ -6,66 +7,77 @@ import Section from "@/components/Section";
 import { Link } from "react-scroll";
 export default function Home() {
     const [navClasses, setNavClasses] = useState("");
+    const [currentIcon, setCurrentIcon] = useState(false);
 
+    useEffect(() => {}, [currentIcon]);
     return (
-        <div className="app relative md:h-screen">
-            <div className="sections relative w-full">
-                {sections.map((section, i, all) => {
-                    let nextSectionID =
-                        all.length - 1 !== i ? all[i + 1].id : "";
-                    return (
-                        <Section
-                            {...section}
-                            nextSectionID={nextSectionID}
-                            key={section.id}
-                            index={i}
-                            isLast={i + 1 === sections.length}
-                        />
-                    );
-                })}
-            </div>
-            <div
-                className={`scrollspy-wrapper fixed top-0 z-50 flex h-full w-12 -translate-x-full transform items-center transition-transform duration-200 md:w-20 ${navClasses}`}
-            >
-                <div className="nav-stacked active flex w-full flex-col justify-center">
-                    {sections.map((section, i) => {
+        <>
+            <Head>
+                <link rel="shortcut icon" href={currentIcon} />
+            </Head>
+            <div className="app relative md:h-screen">
+                <div className="sections relative w-full">
+                    {sections.map((section, i, all) => {
+                        let nextSectionID =
+                            all.length - 1 !== i ? all[i + 1].id : "";
                         return (
-                            <Link
-                                key={i}
-                                activeClass="active"
-                                to={section.id}
-                                spy={true}
-                                smooth={false}
-                                duration={300}
-                                isDynamic={true}
-                                onSetActive={(e) => {
-                                    if (e === "intro") {
-                                        setNavClasses("");
-                                    } else {
-                                        setNavClasses("active");
-                                    }
-                                }}
-                                className={`nav-item mx-auto flex h-8 w-8 cursor-pointer items-center justify-center border-b shadow-lg md:h-12 md:w-12 ${
-                                    i + 1 === sections.length
-                                        ? "border-transparent bg-green-50 hover:bg-green-100"
-                                        : "border-blue-200 bg-blue-50 hover:bg-blue-100"
-                                }`}
-                            >
-                                <span
-                                    className={`material-icons block text-center text-lg md:text-3xl ${
-                                        i + 1 === sections.length
-                                            ? "text-green-300"
-                                            : "text-blue-300"
-                                    }`}
-                                >
-                                    {section.icon}
-                                </span>
-                            </Link>
+                            <Section
+                                {...section}
+                                nextSectionID={nextSectionID}
+                                key={section.id}
+                                index={i}
+                                isLast={i + 1 === sections.length}
+                            />
                         );
                     })}
                 </div>
+                <div
+                    className={`scrollspy-wrapper fixed top-0 z-50 flex h-full w-12 -translate-x-full transform items-center transition-transform duration-200 md:w-20 ${navClasses}`}
+                >
+                    <div className="nav-stacked active flex w-full flex-col justify-center">
+                        {sections.map((section, i) => {
+                            return (
+                                <Link
+                                    key={i}
+                                    activeClass="active"
+                                    to={section.id}
+                                    spy={true}
+                                    smooth={false}
+                                    duration={300}
+                                    isDynamic={true}
+                                    onSetActive={(e) => {
+                                        console.log({ e });
+                                        if (e === "intro") {
+                                            setNavClasses("");
+                                        } else {
+                                            setNavClasses("active");
+                                        }
+
+                                        setCurrentIcon(section.icon);
+                                        console.log(section.icon);
+                                    }}
+                                    className={`nav-item mx-auto flex h-8 w-8 cursor-pointer items-center justify-center border-b shadow-lg md:h-12 md:w-12 ${
+                                        i + 1 === sections.length
+                                            ? "border-transparent bg-green-50 hover:bg-green-100"
+                                            : "border-blue-200 bg-blue-50 hover:bg-blue-100"
+                                    }`}
+                                >
+                                    <span
+                                        className={`material-icons block text-center text-lg md:text-3xl ${
+                                            i + 1 === sections.length
+                                                ? "text-green-300"
+                                                : "text-blue-300"
+                                        }`}
+                                    >
+                                        {section.icon}
+                                    </span>
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 // export async function getServerSideProps(context) {

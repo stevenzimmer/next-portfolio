@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 
@@ -10,7 +11,7 @@ function MyApp({ Component, pageProps }) {
                 <title>Web Zim | Full-stack problem solver</title>
                 <meta
                     name="description"
-                    content="A full Stack problem solver and a one-man web agency"
+                    content="A full Stack problem solver and a one-man web shop"
                 />
             </Head>
 
