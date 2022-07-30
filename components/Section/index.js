@@ -91,7 +91,6 @@ export default function Section(props) {
                                 align="center"
                                 color="primary"
                                 variant="h2"
-                                className={`text-xl md:text-2xl font-medium`}
                                 gutterBottom
                             >
                                 {props.title}
@@ -133,8 +132,7 @@ export default function Section(props) {
                                 <Typography
                                     align="center"
                                     variant="h1"
-                                    className={"text-3xl md:text-4xl"}
-                                    gutterBottom
+                                    marginBottom={3}
                                 >
                                     Web{" "}
                                     <ITyped
