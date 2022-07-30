@@ -1,9 +1,19 @@
 import "../styles/globals.css";
 
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+    createTheme,
+    ThemeProvider,
+    responsiveFontSizes,
+} from "@mui/material/styles";
 import Head from "next/head";
 
-const theme = createTheme();
+let theme = createTheme({
+    typography: {
+        htmlFontSize: 14,
+    },
+});
+
+theme = responsiveFontSizes(theme);
 function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
