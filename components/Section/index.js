@@ -1,7 +1,8 @@
+import { useState, useCallback } from "react";
 import ITyped from "react-ityped";
 import { Typography, Grid, Paper, Button } from "@mui/material";
 import LaunchIcon from "@mui/icons-material/Launch";
-import Zoom from "react-medium-image-zoom";
+import Zoom, { Controlled as ControlledZoom } from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { makeStyles } from "@mui/styles";
 
@@ -35,6 +36,16 @@ export default function Section(props) {
     const classes = useStyles();
     const strings = ["Developer", "Designer", "Engineer", "Marketer", "Zim"];
 
+    const [isZoomed, setIsZoomed] = useState(false);
+
+    const handleImgLoad = useCallback(() => {
+        setIsZoomed(true);
+    }, []);
+
+    const handleZoomChange = useCallback((shouldZoom) => {
+        setIsZoomed(shouldZoom);
+    }, []);
+
     return (
         <Grid
             key={props.index}
@@ -51,9 +62,12 @@ export default function Section(props) {
                 md={7}
                 className={`md:relative sticky top-0 z-1 overflow-hidden bg-blue-50 flex justify-center items-center`}
             >
-                <Zoom
+                <ControlledZoom
                     wrapStyle={{ width: "100%", height: "100%" }}
-                    zoomMargin={100}
+                    isZoomed={isZoomed}
+                    onZoomChange={handleZoomChange}
+                    overlayBgColorStart="rgba(0,0,0,.5)"
+                    overlayBgColorEnd="rgba(0,0,0,.8)"
                 >
                     <img
                         className={`relative mx-auto w-full inline-block ${
@@ -61,10 +75,11 @@ export default function Section(props) {
                                 ? "h-80 object-contain md:h-full"
                                 : "h-full object-cover"
                         } relative md:absolute`}
+                        onLoad={handleImgLoad}
                         src={props.image}
                         alt={props.title}
                     />
-                </Zoom>
+                </ControlledZoom>
             </Grid>
             <Grid
                 item
@@ -116,7 +131,7 @@ export default function Section(props) {
                                 align="center"
                                 color="primary"
                                 variant="h2"
-                                className={`text-2xl font-medium`}
+                                className={`text-xl md:text-2xl font-medium`}
                                 gutterBottom
                             >
                                 {props.title}
@@ -158,7 +173,7 @@ export default function Section(props) {
                                 <Typography
                                     align="center"
                                     variant="h1"
-                                    className={"md:text-4xl"}
+                                    className={"text-3xl md:text-4xl"}
                                     gutterBottom
                                 >
                                     Web{" "}

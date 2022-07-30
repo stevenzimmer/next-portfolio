@@ -7,14 +7,9 @@ import Section from "@/components/Section";
 import { Link } from "react-scroll";
 export default function Home() {
     const [navClasses, setNavClasses] = useState("");
-    const [currentIcon, setCurrentIcon] = useState(false);
 
-    useEffect(() => {}, [currentIcon]);
     return (
         <>
-            <Head>
-                <link rel="shortcut icon" href={currentIcon} />
-            </Head>
             <div className="app relative md:h-screen">
                 <div className="sections relative w-full">
                     {sections.map((section, i, all) => {
@@ -52,9 +47,6 @@ export default function Home() {
                                         } else {
                                             setNavClasses("active");
                                         }
-
-                                        setCurrentIcon(section.icon);
-                                        console.log(section.icon);
                                     }}
                                     className={`nav-item mx-auto flex h-8 w-8 cursor-pointer items-center justify-center border-b shadow-lg md:h-12 md:w-12 ${
                                         i + 1 === sections.length

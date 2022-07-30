@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
                     name="description"
                     content="A full Stack problem solver and a one-man web shop"
                 />
+                <link rel="shortcut icon" href="assets/favicon.svg" />
             </Head>
 
             <Component {...pageProps} />

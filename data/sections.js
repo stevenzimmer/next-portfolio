@@ -471,7 +471,7 @@ export const sections = [
         label: "",
         title: "Benji Bakes",
         bullets: [
-            "An ecommerce store to sell my wonderful wife's delicious chocolate chip cookies.",
+            "An ecommerce store to showcase and sell my wonderful wife's deliciously decadent chocolate chip cookies.",
         ],
 
         image: "/assets/images/benji-bakes.jpg",
