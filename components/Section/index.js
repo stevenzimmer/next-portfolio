@@ -36,16 +36,6 @@ export default function Section(props) {
     const classes = useStyles();
     const strings = ["Developer", "Designer", "Engineer", "Marketer", "Zim"];
 
-    const [isZoomed, setIsZoomed] = useState(false);
-
-    const handleImgLoad = useCallback(() => {
-        setIsZoomed(true);
-    }, []);
-
-    const handleZoomChange = useCallback((shouldZoom) => {
-        setIsZoomed(shouldZoom);
-    }, []);
-
     return (
         <Grid
             key={props.index}
@@ -62,10 +52,8 @@ export default function Section(props) {
                 md={7}
                 className={`md:relative sticky top-0 z-1 overflow-hidden bg-blue-50 flex justify-center items-center`}
             >
-                <ControlledZoom
+                <Zoom
                     wrapStyle={{ width: "100%", height: "100%" }}
-                    isZoomed={isZoomed}
-                    onZoomChange={handleZoomChange}
                     overlayBgColorStart="rgba(0,0,0,.5)"
                     overlayBgColorEnd="rgba(0,0,0,.8)"
                 >
@@ -75,11 +63,10 @@ export default function Section(props) {
                                 ? "h-80 object-contain md:h-full"
                                 : "h-full object-cover"
                         } relative md:absolute`}
-                        onLoad={handleImgLoad}
                         src={props.image}
                         alt={props.title}
                     />
-                </ControlledZoom>
+                </Zoom>
             </Grid>
             <Grid
                 item
