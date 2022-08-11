@@ -4,9 +4,6 @@ import React, { useEffect, useRef } from "react";
 // import "mapbox-gl/dist/mapbox-gl.css";
 // import * as turf from "@turf/turf";
 
-// mapboxgl.accessToken =
-// "pk.eyJ1Ijoic3RldmVuemltbWVyIiwiYSI6ImNrcTVobjRqeTFka20ycHF1cm9ud3h0d2YifQ.9UMD2rpWTV3zhL63tig5og";
-
 export default function Map(props) {
     let mapContainer = useRef(null);
     useEffect(() => {
@@ -64,8 +61,6 @@ export default function Map(props) {
 
         const lineDistance = turf.length(route.features[0]);
 
-        // console.log(lineDistance);
-
         const arc = [];
 
         // Number of steps to use in the arc and animation, more steps means
@@ -86,7 +81,6 @@ export default function Map(props) {
         let counter = 0;
 
         map.on("load", (e) => {
-            // console.log(e);
             // Add a source and layer displaying a point which will be animated in a circle.
             map.addSource("route", {
                 type: "geojson",

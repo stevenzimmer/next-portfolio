@@ -1,10 +1,6 @@
 import "../styles/globals.css";
 
-import {
-    createTheme,
-    ThemeProvider,
-    responsiveFontSizes,
-} from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Head from "next/head";
 
 let theme = createTheme({});
@@ -29,17 +25,44 @@ theme.typography.h2 = {
     },
 };
 
-// theme = responsiveFontSizes(theme);
+const ldJsonDdata = {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    name: "Steven Zimmer",
+    url: "https://webzim.dev/",
+    image: "https://webzim.dev/assets/images/contact-me.jpg",
+    sameAs: [
+        "https://www.linkedin.com/in/webdevzim/",
+        "https://github.com/stevenzimmer",
+        "https://twitter.com/webdevzim",
+    ],
+    jobTitle: "WordPress / Web Developer",
+    worksFor: {
+        "@type": "Organization",
+        name: "WebDevZim",
+    },
+};
 function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
             <Head>
-                <title>Web Zim | Full-stack problem solver</title>
+                <title>Web Zim | WordPress | Full-stack problem solver</title>
                 <meta
                     name="description"
-                    content="A full Stack problem solver and a one-man web shop"
+                    content="Full-stack problem solver specializing in CMS platforms, web performance, and technical SEO."
+                />
+                <meta
+                    name="keywords"
+                    content="web developer, full stack, wordpress"
                 />
                 <link rel="shortcut icon" href="assets/favicon.svg" />
+                <link rel="canonical" href="https://webzim.dev/" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(ldJsonDdata),
+                    }}
+                />
             </Head>
 
             <Component {...pageProps} />

@@ -1,5 +1,4 @@
-import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { sections } from "@/data/sections";
 import Section from "@/components/Section";
@@ -41,7 +40,6 @@ export default function Home() {
                                     duration={300}
                                     isDynamic={true}
                                     onSetActive={(e) => {
-                                        console.log({ e });
                                         if (e === "intro") {
                                             setNavClasses("");
                                         } else {
