@@ -7,7 +7,7 @@ import "react-medium-image-zoom/dist/styles.css";
 import Snap from "../Snap";
 
 export default function Section(props) {
-    const strings = ["Developer", "Designer", "Engineer", "Marketer", "Zim"];
+    const strings = ["Engineer", "Designer", "Strategy", "Marketer", "Zim"];
 
     return (
         <Grid

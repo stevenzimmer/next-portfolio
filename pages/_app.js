@@ -36,7 +36,7 @@ const ldJsonDdata = {
         "https://github.com/stevenzimmer",
         "https://twitter.com/webdevzim",
     ],
-    jobTitle: "WordPress / Web Developer",
+    jobTitle: "Full-stack / Web Strategy / WordPress",
     worksFor: {
         "@type": "Organization",
         name: "WebDevZim",
@@ -46,14 +46,14 @@ function MyApp({ Component, pageProps }) {
     return (
         <ThemeProvider theme={theme}>
             <Head>
-                <title>Web Zim | WordPress | Full-stack problem solver</title>
+                <title>Web Zim | Full-stack | Web Strategy | WordPress</title>
                 <meta
                     name="description"
-                    content="Full-stack problem solver specializing in CMS platforms, web performance, and technical SEO."
+                    content="Full-stack problem solver specializing in WordPress, web strategy, and marketing."
                 />
                 <meta
                     name="keywords"
-                    content="web developer, full stack, wordpress"
+                    content="web developer, full stack, wordpress expert"
                 />
                 <link rel="shortcut icon" href="assets/favicon.svg" />
                 <link rel="canonical" href="https://webzim.dev/" />

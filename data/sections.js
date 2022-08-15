@@ -55,14 +55,14 @@ export const sections = [
         id: "intro",
         icon: <MdOutlineEmojiPeople />,
 
-        title: '"A one-man web shop"',
+        // title: '"A one-man web shop"',
 
         image: "/assets/images/intro.JPG",
         bullets: [
-            "Military vet turned full-stack web engineer specializing in CMS platforms, technical SEO, and marketing technology.",
+            "Military vet turned full-stack engineer specializing in CMS platforms, web strategy, and marketing.",
             `${
                 new Date().getFullYear() - 2014
-            } years software engineer and web marketing experience`,
+            } years web engineer and marketing experience`,
         ],
         advanceText: "See recent projects",
         // chips: [
@@ -526,7 +526,7 @@ export const sections = [
             "Worked with advanced military technology to maintain cruise missile systems inventory.",
             "Subject matter expert teaching cruise missile maintenance fundamentals, electronic theory, circuitry and schematic diagrams at the vocational school for basic training recruits.",
         ],
-        dates: "November 2002 - June 2012",
+        dates: "November 2002 - October 2012",
         image: "/assets/images/air-force.JPG",
         advanceText: "Get in touch",
     },
