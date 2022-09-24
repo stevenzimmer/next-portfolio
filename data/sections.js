@@ -55,15 +55,10 @@ export const sections = [
         id: "intro",
         icon: <MdOutlineEmojiPeople />,
 
-        // title: '"A one-man web shop"',
+        title: "Military vet turned full-stack engineer specializing in growth marketing, web strategy, and CMS platforms.",
 
         image: "/assets/images/intro.JPG",
-        bullets: [
-            "Military vet turned full-stack engineer specializing in CMS platforms, web strategy, and marketing.",
-            `${
-                new Date().getFullYear() - 2014
-            } years web engineer and marketing experience`,
-        ],
+
         advanceText: "See recent projects",
         // chips: [
         //     {
@@ -127,13 +122,13 @@ export const sections = [
         // ],
     },
     {
-        header: "Part-time project",
+        // header: "Part-time project",
         id: "nue",
         icon: <RiNumber1 />,
-        label: "Full-stack engineer",
+        // label: "Full-stack engineer",
         title: "Nue",
         url: "www.nue.io",
-        dates: "August 2021 - March 2022",
+        // dates: "August 2021 - March 2022",
         // description:
         //     "Built marketing website with headless CMS and static site generator.",
         image: "/assets/images/nue.png",
@@ -188,18 +183,18 @@ export const sections = [
         ],
     },
     {
-        header: "Part-time project",
+        // header: "Part-time project",
         id: "armory",
         icon: <RiNumber2 />,
-        label: "WordPress Developer",
+        // label: "WordPress Developer",
         title: "Armory",
         // description: "",
         image: "/assets/images/armory.png",
         bullets: [
-            "Rebuilt website with a custom gutenberg block theme, reduced reliance on heavy plugins, best-in-class load time, high availability architecture.",
+            "Rebuilt website with a custom gutenberg block theme, reduced reliance on heavy plugins, best-in-class load time, and on high availability architecture.",
         ],
         url: "www.armory.io",
-        dates: "March 2021 - March 2022",
+        // dates: "March 2021 - September 2022",
         advanceText: "Recent Project: Intertrust",
         chips: [
             {
@@ -256,10 +251,10 @@ export const sections = [
         ],
     },
     {
-        header: "Full-time job",
+        // header: "Full-time job",
         id: "intertrust",
         icon: <RiNumber3 />,
-        label: "Sr. Web Engineer",
+        // label: "Sr. Web Engineer",
         title: "Intertrust",
         bullets: [
             "Technical lead for marketing initiatives, demand gen campaigns, the CMS migration, and website redesign.",
@@ -267,7 +262,7 @@ export const sections = [
         // description: "",
         image: "/assets/images/intertrust.png",
         url: "www.intertrust.com",
-        dates: "January 2019 - PRESENT",
+        // dates: "January 2019 - September 2022",
         advanceText: "Recent Project: Expressplay",
         chips: [
             {
@@ -315,18 +310,18 @@ export const sections = [
         ],
     },
     {
-        header: "An Intertrust product",
+        // header: "An Intertrust product",
         id: "expressplay",
         icon: <RiNumber4 />,
-        label: "Sr. Web Engineer",
-        title: "Intertrust",
+        // label: "Sr. Web Engineer",
+        title: "ExpressPlay",
         bullets: [
             "Collaborated with marketing, product, and design teams to redesign and rebuild corporate website into beautiful, performant, responsive experience that aligns with the company's mission, identity, and business needs.",
         ],
         // description: "",
         image: "/assets/images/expressplay.png",
         url: "www.expressplay.com",
-        dates: "January 2019 - PRESENT",
+        // dates: "January 2019 - September 2022",
         advanceText: "Recent Project: VIPKid",
         chips: [
             {
@@ -373,16 +368,16 @@ export const sections = [
         ],
     },
     {
-        header: "Part-time project",
+        // header: "Part-time project",
         id: "vipkid",
         icon: <RiNumber5 />,
-        label: "WordPress Developer",
+        // label: "WordPress Developer",
         title: "VIPKid",
         bullets: ["Built and maintained company blog"],
         // description: ",
         image: "/assets/images/vipkid.png",
         url: "blog.vipkid.com",
-        dates: "January 2020 - JANUARY - 2022",
+        // dates: "January 2020 - JANUARY - 2022",
         advanceText: "Personal Projects",
         chips: [
             {
@@ -421,7 +416,7 @@ export const sections = [
         ],
     },
     {
-        header: "Game",
+        // header: "Game",
         id: "dog-breed",
         icon: <FaDog />,
         label: "",
@@ -432,7 +427,7 @@ export const sections = [
         image: "/assets/images/benji-field.jpg",
         url: "stevenzimmer.github.io/dog-breed/",
         buttonText: "Play game",
-        dates: "July 2022",
+        // dates: "July 2022",
         advanceText: "eCommerce",
         chips: [
             {
@@ -465,7 +460,7 @@ export const sections = [
         ],
     },
     {
-        header: "eCommerce Project",
+        // header: "eCommerce Project",
         id: "inprogress",
         icon: <FaCookieBite />,
         label: "",
@@ -477,7 +472,7 @@ export const sections = [
         image: "/assets/images/benji-bakes.jpg",
         url: "github.com/stevenzimmer/benji-bakes",
         buttonText: "view repository",
-        dates: "Started March 2022",
+        // dates: "Started March 2022",
         advanceText: "Where it started",
         chips: [
             {
@@ -520,8 +515,8 @@ export const sections = [
     {
         id: "veteran",
         icon: <MdMilitaryTech />,
-        title: "How it started: ",
-        label: "Veteran",
+        title: "Veteran",
+        // label: "",
         bullets: [
             "Worked with advanced military technology to maintain cruise missile systems inventory.",
             "Subject matter expert teaching cruise missile maintenance fundamentals, electronic theory, circuitry and schematic diagrams at the vocational school for basic training recruits.",
@@ -535,9 +530,10 @@ export const sections = [
         id: "final",
         icon: <AiFillCheckCircle />,
         title: "Contact me",
-        bullets: [
-            "I am available for a full-time role, part-time projects, consulting, or even quick fixes.",
-        ],
+        label: "I am available for a full-time role, part-time projects, consulting, or even quick fixes.",
+        // bullets: [
+        //     "",
+        // ],
         // description: "Profile links",
         image: "/assets/images/contact-me.jpg",
 

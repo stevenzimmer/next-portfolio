@@ -7,7 +7,7 @@ import "react-medium-image-zoom/dist/styles.css";
 import Snap from "../Snap";
 
 export default function Section(props) {
-    const strings = ["Engineer", "Designer", "Strategy", "Marketer", "Zim"];
+    const strings = ["Marketing", "Strategy", "Designer", "Developer", "Zim"];
 
     return (
         <Grid
@@ -87,6 +87,21 @@ export default function Section(props) {
                                     </span>
                                 </div>
                             )}
+                            {props.index === 0 && (
+                                <Typography
+                                    align="center"
+                                    variant="h1"
+                                    marginBottom={3}
+                                >
+                                    Web{" "}
+                                    <ITyped
+                                        className="inline"
+                                        loop={false}
+                                        strings={strings}
+                                        backDelay={1500}
+                                    />
+                                </Typography>
+                            )}
                             <Typography
                                 align="center"
                                 color="primary"
@@ -128,21 +143,7 @@ export default function Section(props) {
                                     {props.description}
                                 </Typography>
                             )}
-                            {props.index === 0 && (
-                                <Typography
-                                    align="center"
-                                    variant="h1"
-                                    marginBottom={3}
-                                >
-                                    Web{" "}
-                                    <ITyped
-                                        className="inline"
-                                        loop={false}
-                                        strings={strings}
-                                        backDelay={1500}
-                                    />
-                                </Typography>
-                            )}
+
                             {props.bullets?.length && (
                                 <ul className="mb-6 list-disc px-6 text-base md:text-xl">
                                     {props.bullets?.map((bullet, i) => (
